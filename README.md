@@ -1,34 +1,63 @@
-# calculator
-this is the first c,c++ project
-#include<iostream>
-using namespace std;
-int main()
-{
-	char op;
-	double num1, num2;
-	cout<<"enter the operator(+,-,*,/): ";
-	cin>>op;
-	cout<<"enter two numbers one by one:";
-	cin>>num1>>num2;
-	switch(op){
-		case'+':
-			cout<<num1<<"+"<<num2<<"="<<(num1+num2);
-			break;
-		case'-':
-			cout<<num1<<"-"<<num2<<"="<<(num1+num2);
-			break;
-		case'*':
-			cout<<num1<<"*"<<num2<<"="<<(num1+num2);
-			break;
-		case'/':
-			if(num2!=0.0)
-				cout<<num1<<"/"<<num2<<"="<<(num1+num2);
-			else
-				cout<<"Divide by Zero situation";
-			break;
-			
-		default:
-		cout<<op<<"is an invalid operator";
-	}
-	return 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="calculator">
+        <div class="screen">
+          <div class="screen-last" id="lastOperationScreen"></div>
+          <div class="screen-current" id="currentOperationScreen">0</div>
+        </div>
+        <div class="buttons-grid">
+          <button
+            class="btn btn-red span-2"
+            id="clearBtn"
+            onclick="this.blur();"
+          >
+            CLEAR
+          </button>
+          <button
+            class="btn btn-blue span-2"
+            id="deleteBtn"
+            onclick="this.blur();"
+          >
+            DELETE
+          </button>
+          <button class="btn" onclick="this.blur();" data-number>7</button>
+          <button class="btn" onclick="this.blur();" data-number>8</button>
+          <button class="btn" onclick="this.blur();" data-number>9</button>
+          <button class="btn" onclick="this.blur();" data-operator>÷</button>
+
+          <button class="btn" onclick="this.blur();" data-number>4</button>
+          <button class="btn" onclick="this.blur();" data-number>5</button>
+          <button class="btn" onclick="this.blur();" data-number>6</button>
+          <button class="btn" onclick="this.blur();" data-operator>×</button>
+
+          <button class="btn" onclick="this.blur();" data-number>1</button>
+          <button class="btn" onclick="this.blur();" data-number>2</button>
+          <button class="btn" onclick="this.blur();" data-number>3</button>
+          <button class="btn" onclick="this.blur();" data-operator>−</button>
+
+          <button class="btn" onclick="this.blur();" id="pointBtn">.</button>
+          <button class="btn" onclick="this.blur();" data-number>0</button>
+          <button class="btn" onclick="this.blur();" id="equalsBtn">=</button>
+          <button class="btn" onclick="this.blur();" data-operator>+</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
